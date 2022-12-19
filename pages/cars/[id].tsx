@@ -6,13 +6,15 @@ export default function Car({ car }) {
     const { id } = router.query // when the user queries on the url, return that query as id.
 
     // render the id value out to the template.
-    return (<>
-    <Head>
-        <title>{car.color}</title>
-    </Head>
-        <h1>{id}</h1>
-        <img src={car.image} />
-    </>)
+    return (
+        <>
+            <Head>
+                <title>{car.color}</title>
+            </Head>
+                <h1>{id}</h1>
+                <img src={car.image} />
+        </>
+    )
 }
 
 export async function getServerSideProps({ params }) {
